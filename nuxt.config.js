@@ -74,7 +74,10 @@ export default {
       theme_color: "#00c58e",
       description:
         "Marca de agua para imagenes"
-    }
+    },
+    icon: {
+      fileName: 'app-icon.png',
+     },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
