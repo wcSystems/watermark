@@ -1,7 +1,6 @@
 export default {
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -45,11 +44,6 @@ export default {
     '@nuxt/content',
     '@nuxtjs/auth-next'
   ],
-  bootstrapVue: {
-    icons: false,
-    components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal'], // not include BootstrapVueIcons component
-    directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
-  },
 
   auth: {
     strategies: {
@@ -80,9 +74,6 @@ export default {
       description:
         "Marca de agua para imagenes"
     },
-    icon: {
-      fileName: 'app-icon.png',
-     },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
