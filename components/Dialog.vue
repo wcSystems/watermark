@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-12">
           <div class="form-group">
-            <input type="text" placeholder="@willinthontech" class="form-control" id="text1" />
+            <input type="text" placeholder="@willinthontech" class="form-control" id="text1" v-model="option_water.content"  />
           </div>
         </div>
       </div>
