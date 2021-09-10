@@ -89,9 +89,11 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  babel: {
-    compact: true,
-   },
+  build: {
+    babel: {
+      compact: true
+    }
+  },
 
   server: {
     port: 3000,
