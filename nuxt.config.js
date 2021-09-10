@@ -45,6 +45,11 @@ export default {
     '@nuxt/content',
     '@nuxtjs/auth-next'
   ],
+  bootstrapVue: {
+    icons: false,
+    components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal'], // not include BootstrapVueIcons component
+    directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
+  },
 
   auth: {
     strategies: {
