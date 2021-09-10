@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-12">
           <div class="form-group">
-            <input type="text" placeholder="@willinthontech" class="form-control" id="text1" v-model="option_water.content"  />
+            <input type="text" placeholder="@willinthontech" class="form-control" id="text1" v-model="content"  />
           </div>
         </div>
       </div>
@@ -52,14 +52,17 @@ export default {
   name: "Dialog",
   data() {
     return {
+      content: '',
       option_water: null
     };
   },
   fetch(){
     this.option_water = this.$auth.$storage.getUniversal("optionwater")
+    this.content = this.option_water.content
   },
   methods: {
     filter() {
+      this.option_water.content = this.content
       this.$emit("SendDialog", this.option_water);
       this.$emit("CloseDialog");
     },
