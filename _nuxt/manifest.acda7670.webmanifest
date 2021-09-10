@@ -1,0 +1,11 @@
+{
+  "name": "Watermark Willinthon",
+  "short_name": "Watermark Willinthon",
+  "description": "Marca de agua para imagenes",
+  "icons": [],
+  "start_url": "/gh-pages/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00c58e",
+  "lang": "es"
+}
