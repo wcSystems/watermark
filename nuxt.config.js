@@ -84,9 +84,9 @@ export default {
   build: {
   },
 
-  /* server: {
-    port: 8080,
+  server: {
+    port: 3000,
     host: "0.0.0.0" //  on production this must be 0.0.0.0
-  }, */
+  },
 
 }
