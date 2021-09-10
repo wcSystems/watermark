@@ -40,7 +40,7 @@ export default {
   modules: [
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    ['@nuxtjs/pwa',{icon: false }],
     '@nuxt/content',
     '@nuxtjs/auth-next'
   ],
