@@ -3,18 +3,18 @@
     <Dialog @CloseDialog="toggleFilter('cc_modal')" @SendDialog="DialogMethod" />
      <footer id="app_footer" class="footer d-flex justify-content-around" :style="cssVars" >
     <slot name="column-1">
-      <div>
-        <i class="fas fa-plus-circle"></i>
+      <div  >
+        <i class="fas fa-plus-circle" style="width:20px !important;height:20px !important;"></i>
       </div>
     </slot>
     <slot name="column-2">
-      <div @click="toggleFilter('cc_modal')" :style="modalActive ? 'color: #00c58e' : 'color: #FFF'" >
-        <i  class="fas fa-th-large"></i>
+      <div @click="toggleFilter('cc_modal')" :style="modalActive ? 'color: #00c58e' : 'color: #FFF'"  >
+        <i  class="fas fa-th-large" style="width:20px !important;height:20px !important;"></i>
       </div>
     </slot>
     <slot name="column-3">
-      <div>
-        <i class="fas fa-save"></i>
+      <div  >
+        <i class="fas fa-save" style="width:20px !important;height:20px !important;"></i>
       </div>
     </slot>
   </footer>

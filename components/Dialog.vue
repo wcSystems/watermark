@@ -11,36 +11,36 @@
       <div class="row">
         <div class="col-12">
           <div class="form-group">
-            <input type="text" placeholder="@willinthontech" class="form-control" id="text1" v-model="content"  />
+            <input id="text1" v-model="optionwater.content" type="text" placeholder="@willinthontech" class="form-control"    />
           </div>
         </div>
       </div>
       <div class="form-group">
         <div class="row">
           <div class="col-4 text-center">
-            <button class="btn p-0 text-center rounded-circle" style="background: #fff;width:38px;height:38px;border: 1px solid #ced4da" @click="option_water.fillStyle = 'white'"></button>
+            <button class="btn p-0 text-center rounded-circle" style="background: #fff;width:38px;height:38px;border: 1px solid #ced4da" @click="optionwater.fillStyle = 'white'"></button>
           </div>
           <div class="col-4 text-center">
-            <button class="btn p-0 text-center rounded-circle" style="background: #00c58e;width:38px;height:38px;border: 1px solid #ced4da" @click="option_water.fillStyle = 'green'"></button>
+            <button class="btn p-0 text-center rounded-circle" style="background: #00c58e;width:38px;height:38px;border: 1px solid #ced4da" @click="optionwater.fillStyle = 'green'"></button>
           </div>
           <div class="col-4 text-center">
-            <button class="btn p-0 text-center rounded-circle" style="background: #000;width:38px;height:38px;border: 1px solid #ced4da" @click="option_water.fillStyle = 'black'"></button>
+            <button class="btn p-0 text-center rounded-circle" style="background: #000;width:38px;height:38px;border: 1px solid #ced4da" @click="optionwater.fillStyle = 'black'"></button>
           </div>
         </div>
       </div>
       <div class="form-group">
         <div class="row">
           <div class="col-3 text-center">
-              <button class="btn p-0 text-center w-100 typeMark" @click="option_water.mode = 'center'" > Center</button>
+              <button class="btn p-0 text-center w-100 typeMark" @click="optionwater.mode = 'center'" > Center</button>
           </div>
           <div class="col-3 text-center">
-              <button class="btn p-0 text-center w-100 typeMark" @click="option_water.mode = 'topleft'" > T-Left</button>
+              <button class="btn p-0 text-center w-100 typeMark" @click="optionwater.mode = 'topleft'" > T-Left</button>
           </div>
           <div class="col-3 text-center">
-              <button class="btn p-0 text-center w-100 typeMark" @click="option_water.mode = 'bottomright'" > B-Right</button>
+              <button class="btn p-0 text-center w-100 typeMark" @click="optionwater.mode = 'bottomright'" > B-Right</button>
           </div>
           <div class="col-3 text-center">
-              <button class="btn p-0 text-center w-100 typeMark" @click="option_water.mode = 'fill'" > Fill</button>
+              <button class="btn p-0 text-center w-100 typeMark" @click="optionwater.mode = 'fill'" > Fill</button>
           </div>
         </div>
       </div>
@@ -48,26 +48,27 @@
   </b-modal>
 </template>
 <script>
-export default {
-  name: "Dialog",
-  data() {
-    return {
-      content: '',
-      option_water: null
-    };
-  },
-  fetch(){
-    this.option_water = this.$auth.$storage.getUniversal("optionwater")
-    this.content = this.option_water.content
-  },
-  methods: {
-    filter() {
-      this.option_water.content = this.content
-      this.$emit("SendDialog", this.option_water);
-      this.$emit("CloseDialog");
+  export default {
+    name: "Dialog",
+    data() {
+      return {
+        optionwater: {
+          mode: 'fill',
+          textBaseline: 'middle',
+          font: '12px Arial',
+          fillStyle: 'white',
+          content: '@willinthontech',
+          rotate: -45
+        }
+      };
     },
-  },
-};
+    methods: {
+      filter() {
+        this.$emit("SendDialog", this.optionwater);
+        this.$emit("CloseDialog");
+      },
+    },
+  };
 </script>
 <style lang="scss">
   .typeMark{

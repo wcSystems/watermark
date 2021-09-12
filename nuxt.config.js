@@ -1,7 +1,10 @@
 export default {
 
   // Target: https://go.nuxtjs.dev/config-target
-
+  // target: 'spa',
+  /* router: {
+    base: '/gh-pages/'
+  }, */
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'water-mark-willinthon',
@@ -49,12 +52,12 @@ export default {
     strategies: {
       local: {
         optionwater: {
-          mode: 'fill',
-          textBaseline: 'middle',
-          font: '12px Arial',
-          fillStyle: 'white',
-          content: '@willinthontech',
-          rotate: -45
+          mode: '',
+          textBaseline: '',
+          font: '',
+          fillStyle: '',
+          content: '',
+          rotate: 0
         }
       }
     }
