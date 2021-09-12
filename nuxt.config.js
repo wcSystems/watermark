@@ -1,7 +1,7 @@
 export default {
 
   // Target: https://go.nuxtjs.dev/config-target
-  // target: 'spa',
+  target: 'static',
   /* router: {
     base: '/gh-pages/'
   }, */
@@ -47,7 +47,6 @@ export default {
     '@nuxt/content',
     '@nuxtjs/auth-next'
   ],
-
   auth: {
     strategies: {
       local: {
