@@ -81,6 +81,9 @@ export default {
     icon: {
       fileName: 'pwa.png',
     },
+    workbox: {
+      // Workbox options
+    }
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

@@ -69,9 +69,8 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.0d22d408.webmanifest",
-      "hid": "manifest",
-      "crossorigin": "use-credentials"
+      "href": "/_nuxt/manifest.7f833749.webmanifest",
+      "hid": "manifest"
     }
   ],
   "htmlAttrs": {
