@@ -1,6 +1,6 @@
 <template>
 <div>
-  <!-- <Dialog @CloseDialog="toggleFilter('cc_modal')" @SendDialog="DialogMethod" /> -->
+  <Dialog @CloseDialog="toggleFilter('cc_modal')" @SendDialog="DialogMethod" />
   <footer id="app_footer" class="footer d-flex justify-content-around" :style="options?`background:${options.bgcolor};color:${options.color}`:``" >
     <slot name="column-1">
       <div  >
