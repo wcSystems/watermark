@@ -2,7 +2,6 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  // ssr: true,
   /* router: {
     base: '/gh-pages/'
   }, */
@@ -38,6 +37,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
   ],
 
@@ -73,7 +73,7 @@ export default {
       name: "Watermark Willinthon",
       short_name: "Watermark Willinthon",
       lang: "es",
-      useWebmanifestExtension: true,
+      useWebmanifestExtension: false,
       theme_color: "#00c58e",
       description:
         "Marca de agua para imagenes"

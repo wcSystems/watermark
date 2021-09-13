@@ -581,7 +581,7 @@ module.exports = require("bootstrap-vue");
 /* 21 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"title\":\"Watermark Willinthon\",\"meta\":[{\"hid\":\"charset\",\"charset\":\"utf-8\"},{\"hid\":\"viewport\",\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},{\"hid\":\"mobile-web-app-capable\",\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"},{\"hid\":\"apple-mobile-web-app-title\",\"name\":\"apple-mobile-web-app-title\",\"content\":\"Watermark Willinthon\"},{\"hid\":\"description\",\"name\":\"description\",\"content\":\"Marca de agua para imagenes\"},{\"hid\":\"theme-color\",\"name\":\"theme-color\",\"content\":\"#00c58e\"},{\"hid\":\"og:type\",\"name\":\"og:type\",\"property\":\"og:type\",\"content\":\"website\"},{\"hid\":\"og:title\",\"name\":\"og:title\",\"property\":\"og:title\",\"content\":\"Watermark Willinthon\"},{\"hid\":\"og:site_name\",\"name\":\"og:site_name\",\"property\":\"og:site_name\",\"content\":\"Watermark Willinthon\"},{\"hid\":\"og:description\",\"name\":\"og:description\",\"property\":\"og:description\",\"content\":\"Marca de agua para imagenes\"}],\"link\":[{\"hid\":\"shortcut-icon\",\"rel\":\"shortcut icon\",\"href\":\"/favicon.ico\"},{\"rel\":\"manifest\",\"href\":\"/_nuxt/manifest.a1048989.webmanifest\",\"hid\":\"manifest\"}],\"htmlAttrs\":{\"lang\":\"es\"}}");
+module.exports = JSON.parse("{\"title\":\"Watermark Willinthon\",\"meta\":[{\"hid\":\"charset\",\"charset\":\"utf-8\"},{\"hid\":\"viewport\",\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},{\"hid\":\"mobile-web-app-capable\",\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"},{\"hid\":\"apple-mobile-web-app-title\",\"name\":\"apple-mobile-web-app-title\",\"content\":\"Watermark Willinthon\"},{\"hid\":\"description\",\"name\":\"description\",\"content\":\"Marca de agua para imagenes\"},{\"hid\":\"theme-color\",\"name\":\"theme-color\",\"content\":\"#00c58e\"},{\"hid\":\"og:type\",\"name\":\"og:type\",\"property\":\"og:type\",\"content\":\"website\"},{\"hid\":\"og:title\",\"name\":\"og:title\",\"property\":\"og:title\",\"content\":\"Watermark Willinthon\"},{\"hid\":\"og:site_name\",\"name\":\"og:site_name\",\"property\":\"og:site_name\",\"content\":\"Watermark Willinthon\"},{\"hid\":\"og:description\",\"name\":\"og:description\",\"property\":\"og:description\",\"content\":\"Marca de agua para imagenes\"}],\"link\":[{\"hid\":\"shortcut-icon\",\"rel\":\"shortcut icon\",\"href\":\"/_nuxt/icons/icon_64x64.e98875.png\"},{\"hid\":\"apple-touch-icon\",\"rel\":\"apple-touch-icon\",\"href\":\"/_nuxt/icons/icon_512x512.e98875.png\",\"sizes\":\"512x512\"},{\"rel\":\"manifest\",\"href\":\"/_nuxt/manifest.7f833749.json\",\"hid\":\"manifest\"}],\"htmlAttrs\":{\"lang\":\"es\"}}");
 
 /***/ }),
 /* 22 */
@@ -1176,16 +1176,6 @@ data.scopedSlots=data.scopedSlots||{};const template=child;const name=getSlotNam
 if(isTemplate(child)&&!isDefaultTemplate(child)){continue;}const processQueue=isDefaultTemplate(child)?child.content:[child];children.push(...processQueue.map(node=>processNode(node,h,doc)));}return h(node.tag,data,children);}const DEFAULT_SLOT='default';function isDefaultTemplate(node){return isTemplate(node)&&getSlotName(node)===DEFAULT_SLOT;}function isTemplate(node){return node.tag==='template';}function getSlotName(node){let name='';for(const propName of Object.keys(node.props)){if(!propName.startsWith('#')&&!propName.startsWith('v-slot:')){continue;}name=propName.split(/[:#]/,2)[1];break;}return name||DEFAULT_SLOT;}/* harmony default export */ var nuxt_content = ({name:'NuxtContent',functional:true,props:{document:{required:true}},render(h,{data,props}){const{document}=props;const{body}=document||{};if(!body||!body.children||!Array.isArray(body.children)){return;}let classes=[];if(Array.isArray(data.class)){classes=data.class;}else if(typeof data.class==='object'){const keys=Object.keys(data.class);classes=keys.filter(key=>data.class[key]);}else{classes=[data.class];}data.class=classes.concat('nuxt-content');data.props=Object.assign({...body.props},data.props);return h('div',data,body.children.map(child=>processNode(child,h,document)));}});
 // CONCATENATED MODULE: ./.nuxt/content/plugin.server.js
 external_vue_default.a.component(nuxt_content.name,nuxt_content);/* harmony default export */ var plugin_server = ((ctx,inject)=>{const $content=ctx.ssrContext.$content;inject('content',$content);ctx.$content=$content;});
-// CONCATENATED MODULE: ./.nuxt/pwa/meta.utils.js
-function mergeMeta(to,from){if(typeof to==='function'){// eslint-disable-next-line no-console
-console.warn('Cannot merge meta. Avoid using head as a function!');return;}for(const key in from){const value=from[key];if(Array.isArray(value)){to[key]=to[key]||[];for(const item of value){// Avoid duplicates
-if(item.hid&&hasMeta(to[key],'hid',item.hid)||item.name&&hasMeta(to[key],'name',item.name)){continue;}// Add meta
-to[key].push(item);}}else if(typeof value==='object'){to[key]=to[key]||{};for(const attr in value){to[key][attr]=value[attr];}}else if(to[key]===undefined){to[key]=value;}}}function hasMeta(arr,key,val){return arr.find(obj=>val?obj[key]===val:obj[key]);}
-// EXTERNAL MODULE: ./.nuxt/pwa/meta.json
-var meta = __webpack_require__(21);
-
-// CONCATENATED MODULE: ./.nuxt/pwa/meta.plugin.js
-/* harmony default export */ var meta_plugin = (function({app}){mergeMeta(app.head,meta);});
 // EXTERNAL MODULE: external "axios"
 var external_axios_ = __webpack_require__(6);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
@@ -1211,6 +1201,18 @@ const headers={"common":{"Accept":"application/json, text/plain, */*"},"delete":
 if( true&&ctx.req&&ctx.req.headers){const reqHeaders={...ctx.req.headers};for(const h of["accept","cf-connecting-ip","cf-ray","content-length","content-md5","content-type","host","x-forwarded-host","x-forwarded-port","x-forwarded-proto"]){delete reqHeaders[h];}axiosOptions.headers.common={...reqHeaders,...axiosOptions.headers.common};}if(true){// Don't accept brotli encoding because Node can't parse it
 axiosOptions.headers.common['accept-encoding']='gzip, deflate';}const axios=createAxiosInstance(axiosOptions);// Inject axios to the context as $axios
 ctx.$axios=axios;inject('axios',axios);});
+// CONCATENATED MODULE: ./.nuxt/pwa/meta.utils.js
+function mergeMeta(to,from){if(typeof to==='function'){// eslint-disable-next-line no-console
+console.warn('Cannot merge meta. Avoid using head as a function!');return;}for(const key in from){const value=from[key];if(Array.isArray(value)){to[key]=to[key]||[];for(const item of value){// Avoid duplicates
+if(item.hid&&hasMeta(to[key],'hid',item.hid)||item.name&&hasMeta(to[key],'name',item.name)){continue;}// Add meta
+to[key].push(item);}}else if(typeof value==='object'){to[key]=to[key]||{};for(const attr in value){to[key][attr]=value[attr];}}else if(to[key]===undefined){to[key]=value;}}}function hasMeta(arr,key,val){return arr.find(obj=>val?obj[key]===val:obj[key]);}
+// EXTERNAL MODULE: ./.nuxt/pwa/meta.json
+var meta = __webpack_require__(21);
+
+// CONCATENATED MODULE: ./.nuxt/pwa/meta.plugin.js
+/* harmony default export */ var meta_plugin = (function({app}){mergeMeta(app.head,meta);});
+// CONCATENATED MODULE: ./.nuxt/pwa/icon.plugin.js
+/* harmony default export */ var icon_plugin = (async function(ctx,inject){const icons={"64x64":"/_nuxt/icons/icon_64x64.e98875.png","120x120":"/_nuxt/icons/icon_120x120.e98875.png","144x144":"/_nuxt/icons/icon_144x144.e98875.png","152x152":"/_nuxt/icons/icon_152x152.e98875.png","192x192":"/_nuxt/icons/icon_192x192.e98875.png","384x384":"/_nuxt/icons/icon_384x384.e98875.png","512x512":"/_nuxt/icons/icon_512x512.e98875.png","ipad_1536x2048":"/_nuxt/icons/splash_ipad_1536x2048.e98875.png","ipadpro9_1536x2048":"/_nuxt/icons/splash_ipadpro9_1536x2048.e98875.png","ipadpro10_1668x2224":"/_nuxt/icons/splash_ipadpro10_1668x2224.e98875.png","ipadpro12_2048x2732":"/_nuxt/icons/splash_ipadpro12_2048x2732.e98875.png","iphonese_640x1136":"/_nuxt/icons/splash_iphonese_640x1136.e98875.png","iphone6_50x1334":"/_nuxt/icons/splash_iphone6_50x1334.e98875.png","iphoneplus_1080x1920":"/_nuxt/icons/splash_iphoneplus_1080x1920.e98875.png","iphonex_1125x2436":"/_nuxt/icons/splash_iphonex_1125x2436.e98875.png","iphonexr_828x1792":"/_nuxt/icons/splash_iphonexr_828x1792.e98875.png","iphonexsmax_1242x2688":"/_nuxt/icons/splash_iphonexsmax_1242x2688.e98875.png"};const getIcon=size=>icons[size+'x'+size]||'';inject('icon',getIcon);});
 // EXTERNAL MODULE: external "@fortawesome/fontawesome-free/js/all.js"
 var all_js_ = __webpack_require__(37);
 
@@ -2761,9 +2763,10 @@ return $auth.init().catch(error=>{if(false){}});});
 // Source: .\\bootstrap-vue.js (mode: 'all')
 // Source: .\\content\\plugin.client.js (mode: 'client')
 // Source: .\\content\\plugin.server.js (mode: 'server')
+// Source: .\\axios.js (mode: 'all')
 // Source: .\\workbox.js (mode: 'client')
 // Source: .\\pwa\\meta.plugin.js (mode: 'all')
-// Source: .\\axios.js (mode: 'all')
+// Source: .\\pwa\\icon.plugin.js (mode: 'all')
 // Source: ..\\plugins\\fontawesome (mode: 'all')
 // Source: ..\\plugins\\watermark (mode: 'client')
 // Source: .\\auth.js (mode: 'all')
@@ -2790,7 +2793,7 @@ const installKey='__nuxt_'+key+'_installed__';if(external_vue_default.a[installK
 external_vue_default.a.use(()=>{if(!Object.prototype.hasOwnProperty.call(external_vue_default.a.prototype,key)){Object.defineProperty(external_vue_default.a.prototype,key,{get(){return this.$root.$options[key];}});}});}// Inject runtime config as $config
 inject('config',config);if(false){}// Add enablePreview(previewData = {}) in context for plugins
 if(false){}// Plugin execution
-if(typeof /* Cannot get final name for export "default" in "./.nuxt/components/plugin.js" (known exports: , known reexports: ) */ undefined==='function'){await /* Cannot get final name for export "default" in "./.nuxt/components/plugin.js" (known exports: , known reexports: ) */ undefined(app.context,inject);}if(typeof /* Cannot get final name for export "default" in "./.nuxt/bootstrap-vue.js" (known exports: , known reexports: ) */ undefined==='function'){await /* Cannot get final name for export "default" in "./.nuxt/bootstrap-vue.js" (known exports: , known reexports: ) */ undefined(app.context,inject);}if(false){}if( true&&typeof plugin_server==='function'){await plugin_server(app.context,inject);}if(false){}if(typeof meta_plugin==='function'){await meta_plugin(app.context,inject);}if(typeof _nuxt_axios==='function'){await _nuxt_axios(app.context,inject);}if(typeof /* Cannot get final name for export "default" in "./plugins/fontawesome.js" (known exports: , known reexports: ) */ undefined==='function'){await /* Cannot get final name for export "default" in "./plugins/fontawesome.js" (known exports: , known reexports: ) */ undefined(app.context,inject);}if(false){}if(typeof auth==='function'){await auth(app.context,inject);}// Lock enablePreview in context
+if(typeof /* Cannot get final name for export "default" in "./.nuxt/components/plugin.js" (known exports: , known reexports: ) */ undefined==='function'){await /* Cannot get final name for export "default" in "./.nuxt/components/plugin.js" (known exports: , known reexports: ) */ undefined(app.context,inject);}if(typeof /* Cannot get final name for export "default" in "./.nuxt/bootstrap-vue.js" (known exports: , known reexports: ) */ undefined==='function'){await /* Cannot get final name for export "default" in "./.nuxt/bootstrap-vue.js" (known exports: , known reexports: ) */ undefined(app.context,inject);}if(false){}if( true&&typeof plugin_server==='function'){await plugin_server(app.context,inject);}if(typeof _nuxt_axios==='function'){await _nuxt_axios(app.context,inject);}if(false){}if(typeof meta_plugin==='function'){await meta_plugin(app.context,inject);}if(typeof icon_plugin==='function'){await icon_plugin(app.context,inject);}if(typeof /* Cannot get final name for export "default" in "./plugins/fontawesome.js" (known exports: , known reexports: ) */ undefined==='function'){await /* Cannot get final name for export "default" in "./plugins/fontawesome.js" (known exports: , known reexports: ) */ undefined(app.context,inject);}if(false){}if(typeof auth==='function'){await auth(app.context,inject);}// Lock enablePreview in context
 if(false){}// Wait for async component to be resolved first
 await new Promise((resolve,reject)=>{// Ignore 404s rather than blindly replacing URL in browser
 if(false){}router.replace(app.context.route.fullPath,resolve,err=>{// https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
