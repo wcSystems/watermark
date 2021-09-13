@@ -1,5 +1,5 @@
 <template>
-  <div id="app_header" class="header" :style="cssVars">
+  <div id="app_header" class="header" :style="options?`background:${options.bgcolor};color:${options.color}`:``">
     <slot name="column-1">
       <div>
         {{ options.text }}
@@ -20,25 +20,15 @@ export default {
         bgcolor: '#3c3c3c',
       }),
     },
-  },
-  computed: {
-    cssVars() {
-      return {
-        '--color': `${this.options.color} !important`,
-        '--bgcolor': `${this.options.bgcolor} !important`
-      }
-    }
   }
 };
 </script>
 <style lang="scss" scoped>
   .header {
-    background: var(--bgcolor);
     width: 100%;
     height: 45px !important;
     top: 0;
     z-index: 200;
-    color: var(--color);
     font-size: 15pt !important;
     display: inline-block;
     padding: 0.5rem;

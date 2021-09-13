@@ -1,7 +1,7 @@
 <template>
 <div>
-    <Dialog @CloseDialog="toggleFilter('cc_modal')" @SendDialog="DialogMethod" />
-     <footer id="app_footer" class="footer d-flex justify-content-around" :style="cssVars" >
+  <!-- <Dialog @CloseDialog="toggleFilter('cc_modal')" @SendDialog="DialogMethod" /> -->
+  <footer id="app_footer" class="footer d-flex justify-content-around" :style="options?`background:${options.bgcolor};color:${options.color}`:``" >
     <slot name="column-1">
       <div  >
         <i class="fas fa-plus-circle" style="width:20px !important;height:20px !important;"></i>
@@ -56,25 +56,15 @@ export default {
         this.$bvModal.show(modalTarget);
       }
     },
-  },
-  computed: {
-    cssVars() {
-      return {
-        '--color': `${this.options.color} !important`,
-        '--bgcolor': `${this.options.bgcolor} !important`
-      }
-    },
   }
 };
 </script>
 <style lang="scss" scoped>
   .footer {
-    background: var(--bgcolor);
     width: 100%;
     height: 45px !important;
     bottom: 0;
     z-index: 200;
-    color: var(--color);
     font-size: 15pt !important;
     display: inline-block;
     padding: 0.5rem;
