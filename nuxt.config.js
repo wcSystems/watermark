@@ -80,7 +80,7 @@ export default {
     },
     icon: {
       fileName: 'pwa.png',
-    }
+    },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
