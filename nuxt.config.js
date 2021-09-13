@@ -37,6 +37,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
   ],
 
@@ -92,9 +93,9 @@ export default {
     }
   },
 
-  server: {
+  /* server: {
     port: 3000,
     host: "0.0.0.0" //  on production this must be 0.0.0.0
-  },
+  }, */
 
 }
