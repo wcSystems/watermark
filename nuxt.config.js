@@ -77,7 +77,7 @@ export default {
       useWebmanifestExtension: true,
       theme_color: "#00c58e",
       description:
-        "Marca de agua para imagenes"
+        "Marca de agua para imagenes."
     },
     icon: {
       fileName: 'pwa.png',
