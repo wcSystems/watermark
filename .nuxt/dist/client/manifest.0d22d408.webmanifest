@@ -50,5 +50,6 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#00c58e",
-  "lang": "es"
+  "lang": "es",
+  "crossorigin": "use-credentials"
 }
