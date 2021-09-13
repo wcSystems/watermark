@@ -37,7 +37,6 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
   ],
 
@@ -75,7 +74,8 @@ export default {
       lang: "es",
       useWebmanifestExtension: true,
       theme_color: "#00c58e",
-      description: "Marca de agua para imagenes"
+      description:
+        "Marca de agua para imagenes"
     },
     icon: {
       fileName: 'pwa.png',
