@@ -6,6 +6,7 @@ export default {
     base: '/gh-pages/'
   }, */
   // Global page headers: https://go.nuxtjs.dev/config-head
+
   head: {
     title: 'water-mark-willinthon',
     meta: [
