@@ -27,7 +27,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/sw.client.js',
     "@/plugins/fontawesome",
     { src: "@/plugins/watermark", mode: "client" }
   ],
@@ -76,17 +75,12 @@ export default {
       lang: "es",
       useWebmanifestExtension: true,
       theme_color: "#00c58e",
-      description: "Marca de agua para imagenes",
-      crossorigin: 'use-credentials'
+      description:
+        "Marca de agua para imagenes"
     },
     icon: {
       fileName: 'pwa.png',
     },
-    workbox: {
-      importScripts: [
-          'custom-sw.js'
-      ],
-    }
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
