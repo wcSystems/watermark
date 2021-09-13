@@ -1,7 +1,7 @@
 export default {
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
   /* router: {
     base: '/gh-pages/'
   }, */
@@ -80,9 +80,6 @@ export default {
     },
     icon: {
       fileName: 'pwa.png',
-    },
-    workbox: {
-      // Workbox options
     }
   },
 
