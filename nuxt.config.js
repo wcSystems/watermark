@@ -1,6 +1,7 @@
 export default {
 
   // Target: https://go.nuxtjs.dev/config-target
+  ssr: true,
   target: 'static',
   /* router: {
     base: '/gh-pages/'
@@ -37,7 +38,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
   ],
 
@@ -45,7 +46,7 @@ export default {
   modules: [
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    ['@nuxtjs/pwa',{icon: false }],
+    '@nuxtjs/pwa',
     '@nuxt/content',
     '@nuxtjs/auth-next'
   ],
